@@ -25,7 +25,7 @@ I use Recall Score and ROC-AUC Score as evaluation metrics for the model in orde
 
 ## Data Understanding - EDA
 ### 1. General information about dataset
-![alt text](images/df_info.png "Distribution of Response Variable")
+![alt text](images/df_info.png "df.info")
 From the image above, this dataset:
 * It consists of 12 columns and 381109 rows
 * Has no missing values
@@ -39,7 +39,7 @@ For the boxplot, the most important thing we should pay attention to is the pres
 * Outliers are seen mainly in the `Annual Premium` column
 * From the boxplot it also appears which columns whose distribution looks a bit skewed: `Age` and `Policy Sales Channel`
 ### 4. Correlation Heatmap
-![alt text](images/corr_heatmap.png "Box Plot")
+![alt text](images/corr_heatmap.png "Correlation Heatmap")
 From the correlation heatmap above, it can be seen that:
 
 * Our target `Response` column correlates quite strongly with `Previously Insured` but the correlation is negative.
@@ -67,7 +67,7 @@ I tried five different models:
 
 ## Model performance
 The XGBoost model has a slightly better score among the other four models. 
-![alt text](images/model_performance.png "Box Plot")
+![alt text](images/model_performance.png "Model Performance")
 
 ## Conclusion
 Here i don't do Hyperparameter tuning because even without that the score is pretty good. After getting model with the best score, namely XGBoost, it's hoped that this model can predict quite precisely which customers are interested and who aren't interested so that it can assist companies to save time and costs in offering to only potentially interested customers.
